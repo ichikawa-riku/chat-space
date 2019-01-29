@@ -23,3 +23,17 @@
 - has_many :user, through:members
 - has_mane :members
 - accepts_nested_attributes_for :members
+
+## massagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|body|text|null: true|
+|image|string|null: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
