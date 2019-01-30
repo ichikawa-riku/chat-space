@@ -15,8 +15,9 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
 |member_id|string|null: false, foreign_key: true|
+|name|string|null: false|
+|member_id|string|null: false|
 
 ### Association
 - has_many :massages
