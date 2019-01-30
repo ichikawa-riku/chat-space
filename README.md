@@ -16,7 +16,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|member_id|string|null: false|
 
 ### Association
 - has_many :massages
