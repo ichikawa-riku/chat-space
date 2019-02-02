@@ -21,7 +21,7 @@
         &__group-members{
           box-sizing: border-box;
           height: 12px;
-            .group-member{
+            &--title, &--name{
               font-size: 12px;
               display: inline;
               line-height: 12px;
@@ -47,7 +47,7 @@
       height: calc(100vh - 100px - 90px);
       &__massage{
         margin-top: 40px;
-        .name{
+        &--name{
           display: inline-block;
           font-size: 16px;
           font-style: bold;
@@ -55,12 +55,12 @@
           line-height: 16px;
           margin-right: 10px;
         }
-        .date{
+        &--date{
           display: inline-block;
           font-size: 12px;
           color: #999999;
         }
-        .text{
+        &--text{
           margin-top: 10px;
           font-size: 14px;
           color: #434A54;
@@ -88,24 +88,29 @@
         height: 50px;
         position: absolute;
         right: 155px;
-        .icon{
+        &--icon{
         }
-        .input-image{
+        &--input-image{
           display: none;
         }
       }
       &__send{
-        position: absolute;
-        right: 40px;
-        bottom: 20px;
-        background-color: #38AEF0;
-        color: white;
-        margin-left: 15px;
-        box-sizing: border-box;
-        height: 50px;
-        width: 90px;
-        line-height: 50px;
-        text-align: center;
+        &--button{
+          position: absolute;
+          right: 40px;
+          bottom: 20px;
+          background-color: #38AEF0;
+          color: white;
+          margin-left: 15px;
+          box-sizing: border-box;
+          height: 50px;
+          width: 90px;
+          line-height: 50px;
+          text-align: center;
+        }
+        &--submit{
+          display: none;
+        }
       }
     }
 }
