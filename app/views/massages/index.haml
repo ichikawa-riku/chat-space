@@ -1,6 +1,3 @@
--# ここから上バー
-.bar
-  チャットグループが作成されました
 -# ここから左ナビ
 .nav
   .nav-top
@@ -8,10 +5,10 @@
       Ichikawa
     %ul.nav-top__menue
       =link_to "" do
-        %li.menue__list
+        %li.nav-top__menue--list
           = fa_icon "edit lg", class: "icon"
       =link_to "" do
-        %li.menue__list
+        %li.nav-top__menue--list
           = fa_icon "cog lg", class: "icon"
   .nav-bottom
     = render 'group'
@@ -21,11 +18,11 @@
     .main-info__group-name
       グループ名
     %ul.main-info__group-members
-      %li.group-member
+      %li.main-info__group-members--title
         member:
-      %li.group-member
+      %li.main-info__group-members--name
         市川
-      %ii.group-member
+      %ii.main-info__group-members--name
         石川
     .main-info__edit
       Edit
@@ -34,7 +31,9 @@
   .main-sendding
     %input.main-sendding__writting{type: "text", placeholder: "type a massage"}
     %label.main-sendding__file{for: "upload-icon"}
-      = fa_icon "picture-o", class: "icon"
-      %input.input-image#upload-icon{type: "file"}
-    .main-sendding__send
-      SEND
+      = fa_icon "picture-o", class: "main-sendding__file--icon"
+      %input.main-sendding__file--input-image#upload-icon{type: "file"}
+    %label.main-sendding__send{type: "submit"}
+      .main-sendding__send--button
+        Send
+      %input.main-sendding__send--submit#submit{type: "submit"}
