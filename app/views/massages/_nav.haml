@@ -1,0 +1,13 @@
+.nav
+  .nav-top
+    .nav-top__name
+      Ichikawa
+    %ul.nav-top__menue
+      =link_to "" do
+        %li.nav-top__menue--list
+          = fa_icon "edit lg", class: "icon"
+      =link_to "" do
+        %li.nav-top__menue--list
+          = fa_icon "cog lg", class: "icon"
+  .nav-bottom
+    = render 'group'
