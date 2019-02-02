@@ -1,0 +1,40 @@
+-# ここから上バー
+.bar
+  チャットグループが作成されました
+-# ここから左ナビ
+.nav
+  .nav-top
+    .nav-top__name
+      Ichikawa
+    %ul.nav-top__menue
+      =link_to "" do
+        %li.menue__list
+          = fa_icon "edit lg", class: "icon"
+      =link_to "" do
+        %li.menue__list
+          = fa_icon "cog lg", class: "icon"
+  .nav-bottom
+    = render 'group'
+-# ここからメイン
+.main
+  .main-info
+    .main-info__group-name
+      グループ名
+    %ul.main-info__group-members
+      %li.group-member
+        member:
+      %li.group-member
+        市川
+      %ii.group-member
+        石川
+    .main-info__edit
+      Edit
+  .main-massages
+    = render 'massage'
+  .main-sendding
+    %input.main-sendding__writting{type: "text", placeholder: "type a massage"}
+    %label.main-sendding__file{for: "upload-icon"}
+      = fa_icon "picture-o", class: "icon"
+      %input.input-image#upload-icon{type: "file"}
+    .main-sendding__send
+      SEND
