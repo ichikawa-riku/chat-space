@@ -1,0 +1,24 @@
+.main
+  .main-info
+    .main-info__group-name
+      グループ名
+    %ul.main-info__group-members
+      %li.main-info__group-members--title
+        member:
+      %li.main-info__group-members--name
+        市川
+      %ii.main-info__group-members--name
+        石川
+    .main-info__edit
+      Edit
+  .main-massages
+    = render 'massage'
+  .main-sendding
+    %input.main-sendding__writting{type: "text", placeholder: "type a massage"}
+    %label.main-sendding__file{for: "upload-icon"}
+      = fa_icon "picture-o", class: "main-sendding__file--icon"
+      %input.main-sendding__file--input-image#upload-icon{type: "file"}
+    %label.main-sendding__send{type: "submit"}
+      .main-sendding__send--button
+        Send
+      %input.main-sendding__send--submit#submit{type: "submit"}
