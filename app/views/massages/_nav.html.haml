@@ -1,12 +1,12 @@
 .nav
   .nav-top
-    .nav-top__name
-      Ichikawa
+    %h3.nav-top__name
+      = current_user.name
     %ul.nav-top__menue
       =link_to "" do
         %li.nav-top__menue--list
           = fa_icon "edit lg", class: "icon"
-      =link_to "" do
+      =link_to edit_user_path(current_user) do
         %li.nav-top__menue--list
           = fa_icon "cog lg", class: "icon"
   .nav-bottom
