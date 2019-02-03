@@ -8,8 +8,8 @@
 
 ### Association
 - has_many :massages
-- has_many :groups, through:members
-- has_many :members
+- has_many :groups, through:group-users
+- has_many :group-users
 
 ## gropusテーブル
 
@@ -19,9 +19,9 @@
 
 ### Association
 - has_many :massages
-- has_many :user, through:members
-- has_mane :members
-- accepts_nested_attributes_for :members
+- has_many :user, through:group-users
+- has_mane :group-users
+- accepts_nested_attributes_for :group-users
 
 ## massagesテーブル
 
@@ -36,7 +36,7 @@
 - belongs_to :user
 - belongs_to :group
 
-## membersテーブル
+## group-usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
