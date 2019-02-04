@@ -13,11 +13,11 @@
       .main-info__edit
         Edit
   .main-massages
-    = render 'shared/massage'
-  .main-sendding
+    = render 'massage'
+  %form.main-sendding
     = form_for [@group, @message] do |f|
-      = f.text_filed class: "main-sendding__writting", placeholder: "type a massage"
-      = f.label :image, class: "main-sendding__file"
-        = fa_icon "picture-o", class: "main-sendding__file--icon"
-        = f.file_field :image, class: "input.main-sendding__file--input-image", id: "upload-icon"
-      = f.submit 'Send', class: "main-sendding__send"
+      = f.text_field :content, class: 'main-sendding__writting', placeholder: 'type a message'
+      = f.label :image, class: 'main-sendding__file' do
+        = fa_icon 'picture-o', class: 'main-sendding__file--icon'
+        = f.file_field :image, class: 'main-sendding__file--input-image'
+      = f.submit 'Send', class: 'main-sendding__send'

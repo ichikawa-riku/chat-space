@@ -95,22 +95,18 @@
         }
       }
       &__send{
-        &--button{
-          position: absolute;
-          right: 40px;
-          bottom: 20px;
-          background-color: #38AEF0;
-          color: white;
-          margin-left: 15px;
-          box-sizing: border-box;
-          height: 50px;
-          width: 90px;
-          line-height: 50px;
-          text-align: center;
+        position: absolute;
+        right: 40px;
+        bottom: 20px;
+        background-color: #38AEF0;
+        color: white;
+        margin-left: 15px;
+        box-sizing: border-box;
+        height: 50px;
+        width: 90px;
+        line-height: 50px;
+        text-align: center;
+        border: 0;
         }
-        &--submit{
-          display: none;
-        }
-      }
     }
 }
