@@ -1,0 +1,24 @@
+.main
+  .main-info
+    .main-info__group-name
+      グループ名
+    %ul.main-info__group-members
+      %li.main-info__group-members--title
+        member:
+      - @group.users.each do |user|
+        %li.main-info__group-members--name
+          = user.name
+    = link_to edit_group_path(@group) do
+      .main-info__edit
+        Edit
+  .main-massages
+    = render @messages
+  .main-sendding
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'main-sendding__writting', placeholder: 'type a message'
+      = f.label :image, class: 'main-sendding__file' do
+        = fa_icon 'picture-o', class: 'main-sendding__file--icon'
+        = f.file_field :image, class: 'main-sendding__file--input-image'
+      = f.submit 'Send', class: 'main-sendding__send'
+
+

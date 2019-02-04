@@ -9,17 +9,15 @@
         市川
       %ii.main-info__group-members--name
         石川
-    = link_to "" do
+    = link_to edit_group_path(@group) do
       .main-info__edit
         Edit
   .main-massages
     = render 'shared/massage'
   .main-sendding
-    %input.main-sendding__writting{type: "text", placeholder: "type a massage"}
-    %label.main-sendding__file{for: "upload-icon"}
-      = fa_icon "picture-o", class: "main-sendding__file--icon"
-      %input.main-sendding__file--input-image#upload-icon{type: "file"}
-    %label.main-sendding__send{type: "submit"}
-      .main-sendding__send--button
-        Send
-      %input.main-sendding__send--submit#submit{type: "submit"}
+    = form_for [@group, @message] do |f|
+      = f.text_filed class: "main-sendding__writting", placeholder: "type a massage"
+      = f.label :image, class: "main-sendding__file"
+        = fa_icon "picture-o", class: "main-sendding__file--icon"
+        = f.file_field :image, class: "input.main-sendding__file--input-image", id: "upload-icon"
+      = f.submit 'Send', class: "main-sendding__send"
