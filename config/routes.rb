@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'massages#index'
+  root 'groups#index'
   devise_for :users
-  resources :users, only: [:edit, :update]
-  resources :massages
+  resources :users, only: [:index, :edit, :update]
+  resources :groups, only: [:edit, :update, :new, :create] do resources :massages, only: [:index, :create] end
 end

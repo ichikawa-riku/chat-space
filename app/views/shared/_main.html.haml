@@ -9,10 +9,11 @@
         市川
       %ii.main-info__group-members--name
         石川
-    .main-info__edit
-      Edit
+    = link_to "" do
+      .main-info__edit
+        Edit
   .main-massages
-    = render 'massage'
+    = render 'shared/massage'
   .main-sendding
     %input.main-sendding__writting{type: "text", placeholder: "type a massage"}
     %label.main-sendding__file{for: "upload-icon"}
