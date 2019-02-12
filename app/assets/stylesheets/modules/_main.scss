@@ -42,9 +42,11 @@
         }
     }
     .main-massages{
-      margin-top: 46px;
+      // margin-top: 46px;
       padding:0 40px 0 40px;
       height: calc(100vh - 100px - 90px);
+      box-sizing: border-box;
+      overflow:auto;
       &__massage{
         margin-top: 40px;
         &--name{
