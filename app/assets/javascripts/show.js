@@ -35,8 +35,7 @@ $(function(){
       var height = ($('.main-massages').get(0).scrollHeight)
       $('.main-massages').append(html)
       $('.main-massages').animate({scrollTop: height})
-      $('.main-sendding__writting').val("")
-      $('.main-sendding__file--input-image').val("")
+      $('#new_message').get(0).reset()
     })
     .fail(function(){
       alert('error');
