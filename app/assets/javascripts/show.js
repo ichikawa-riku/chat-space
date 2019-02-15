@@ -43,7 +43,9 @@ $(function(){
     })
     .done(function(data){
       var html =buildHTML(data);
+      var height = ($('.main-massages').get(0).scrollHeight)
       $('.main-massages').append(html)
+      $('.main-massages').animate({scrollTop: height})
       $('.main-sendding__writting').val("")
       $('.main-sendding__file--input-image').val("")
     })
