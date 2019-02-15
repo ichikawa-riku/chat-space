@@ -1,31 +1,21 @@
 $(function(){
   function buildHTML (data){
-    if(data.image.url === null) {
-      var html = `<div class='main-massages__massage'>
-                    <div class='main-massages__massage--name'>
-                      ${data.user_name}
-                    </div>
-                    <div class='main-massages__massage--date'>
-                      ${data.created_at}
-                    </div>
-                    <div class='main-massages__massage--text'>
-                      ${data.content}
-                    </div>
-                  </div>`
-    } else {
-      var html = `<div class='main-massages__massage'>
-                    <div class='main-massages__massage--name'>
-                      ${data.user_name}
-                    </div>
-                    <div class='main-massages__massage--date'>
-                      ${data.created_at}
-                    </div>
-                    <div class='main-massages__massage--text'>
-                      ${data.content}
-                    </div>
-                    <img src="${data.image.url}">
-                  </div>`
+    var image = ""
+    if(data.image.url) {
+      image = `<img src="${data.image.url}">`;
     }
+      var html = `<div class='main-massages__massage'>
+                    <div class='main-massages__massage--name'>
+                      ${data.user_name}
+                    </div>
+                    <div class='main-massages__massage--date'>
+                      ${data.created_at}
+                    </div>
+                    <div class='main-massages__massage--text'>
+                      ${data.content}
+                    </div>
+                    ${image}
+                  </div>`
       return html
   }
   $('#new_message').on('submit', function(e){
