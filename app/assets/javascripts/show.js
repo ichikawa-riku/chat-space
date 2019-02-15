@@ -20,7 +20,6 @@ $(function(){
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
-    console.log('イベントが発火されました')
     var formData = new FormData(this);
     var url = $(this).attr('action');
     $.ajax({
