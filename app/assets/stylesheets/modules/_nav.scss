@@ -35,6 +35,7 @@
 .nav-bottom{
   height: calc(100vh - 100px);
   background-color: #2f3e51;
+  overflow:auto;
   &__group{
     color: white;
     padding: 20px 20px 40px 20px;
