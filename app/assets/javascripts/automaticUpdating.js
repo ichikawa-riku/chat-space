@@ -1,8 +1,10 @@
 $(function(){
   function buildHtml(message){
-    var image = ""
+    var image
     if(message.image.url) {
       image = `<img src="${message.image.url}">`;
+    } else {
+      image = ""
     }
       var html = `<div class='main-massages__massage'>
                     <div class='main-massages__massage--name'>
@@ -28,18 +30,11 @@ $(function(){
     .done(function(messages){
       var htmlMessagesCount = $('.main-massages__massage').length
       var jsonMessagesCount = messages.length
-      console.log(htmlMessagesCount)
-      console.log(jsonMessagesCount)
-      console.log(messages)
       if(jsonMessagesCount !== htmlMessagesCount){
         var diffrence = jsonMessagesCount - htmlMessagesCount
-        console.log(diffrence)
         for (var i=diffrence; i>0; i--){
-          console.log(i)
           var takeOutIndex = jsonMessagesCount - i;
-          console.log(takeOutIndex);
           var message = messages[takeOutIndex];
-          console.log(message)
           var html = buildHtml(message);
           var height = ($('.main-massages').get(0).scrollHeight);
           $('.main-massages').append(html)
